@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+class TripSummary extends StatelessWidget {
+  final int stations;
+  final int time;
+  final int price;
+
+  const TripSummary({
+    super.key,
+    required this.stations,
+    required this.time,
+    required this.price,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.all(20),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+      ),
+      elevation: 6,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "Trip Summary",
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.blueGrey[800],
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(Icons.train, color: Colors.blueGrey),
+                Text("Stations: $stations", style: TextStyle(fontSize: 18)),
+              ],
+            ),
+            const Divider(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(Icons.access_time, color: Colors.blueGrey),
+                Text("Time: $time min", style: TextStyle(fontSize: 18)),
+              ],
+            ),
+            const Divider(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(Icons.attach_money, color: Colors.blueGrey),
+                Text("Price: $price EGP", style: TextStyle(fontSize: 18)),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
