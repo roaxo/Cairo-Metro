@@ -20,11 +20,6 @@
 
 Built on **GetX** — controllers manage station data and location state, with reactive updates keeping the UI in sync as the user's position changes.
 
-| Screen | Preview |
-|---|---|
-| Station Finder | ![Station Finder](screenshots/station_finder.png) |
-| Route View | ![Route View](screenshots/route_view.png) |
-
 ## 📦 Key Packages
 
 | Package | Purpose |
